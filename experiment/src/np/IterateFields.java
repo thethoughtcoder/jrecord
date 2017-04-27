@@ -31,7 +31,7 @@ public class IterateFields {
 			        BASE_DIR + "FAL.D15215.TXT");
 			
 			line = reader.read();
-			showAllFields(line);
+			sortFieldsByPos(line);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -69,6 +69,18 @@ public class IterateFields {
 				List<AbstractFieldValue> ele = sorted.get(pos);
 				ele.add(afv);
 			}
+		}
+		
+		for (Map.Entry<Integer, List<AbstractFieldValue>> e:sorted.entrySet()) {
+			List<AbstractFieldValue> l = e.getValue();
+			StringBuilder sb = new StringBuilder(String.valueOf(e.getKey()));
+			sb.append(": ");
+			for (AbstractFieldValue afv : l) {
+				IFieldDetail ifd = afv.getFieldDetail();
+				sb.append(ifd.getLookupName()).append("[").append(ifd.getLen()).append("], ");
+			}
+			System.out.println(sb.toString());
+			
 		}
 	}
 }
