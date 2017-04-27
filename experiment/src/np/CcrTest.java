@@ -17,8 +17,8 @@ public final class CcrTest {
                 AbstractLineReader reader  = ioProvider.getLineReader(Constants.IO_FIXED_LENGTH_RECORDS,
                                 Convert.FMT_MAINFRAME,
                                 CopybookLoader.SPLIT_NONE,
-                                "/home/dev/now/ccres/users/CPY-CCREST4P.txt",
-                                "/home/dev/now/ccres/ZK000.ZK3ALMTO.CUSTME.RESULT.D1520901.dat");
+                                "/home/ray/now/ccres/users/CPY-CCREST4P.txt",
+                                "/home/ray/now/ccres/ZK000.ZK3ALMTO.CUSTME.RESULT.D1520901.dat");
                 while ((line = reader.read()) != null) {
                         lineNum += 1;
                         String recType = line.getFieldValue("PRRS-RECORD-TYPE").asString();
