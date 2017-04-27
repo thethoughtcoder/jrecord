@@ -64,7 +64,7 @@
         <dependency>
             <groupId>net.sf.cb2xml</groupId>
             <artifactId>cb2xml</artifactId>
-            <version>0.95.4</version>
+            <version>0.95.8</version>
         </dependency>
     </dependencies>
 
@@ -74,7 +74,7 @@
         <!--module>JRecord_CodeGen</module!-->
         <module>JRecord_IO_Builder_Examples</module>
         <module>JRecord_Cbl2Xml</module>
+        <module>experiment</module>
     </modules>
 
 </project>
-
